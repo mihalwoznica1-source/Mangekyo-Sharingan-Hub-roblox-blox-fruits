@@ -1,12 +1,14 @@
--- === Mangekyo Sharingan Hub ===
-print("🔴 Inicjalizacja Mangekyo Sharingan Hub...")
+-- === Mangekyo Sharingan Hub - Main ===
+print("🔴 Uruchamiam Mangekyo Sharingan Hub...")
 
-local player = game.Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
+local repo = "https://raw.githubusercontent.com/mihalwoznicai-source/Mangekyo-Sharingan-Hub-roblox-blox-fruits/main/"
 
--- Intro
-loadstring(game:HttpGet("https://raw.githubusercontent.com/mihalwoznicai-source/Mangekyo-Sharingan-Hub-roblox-blox-fruits/main/Intro.lua"))()
+-- Najpierw Intro
+loadstring(game:HttpGet(repo .. "Intro.lua"))()
 
--- Po intro ładujemy główny hub
-wait(4)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/mihalwoznicai-source/Mangekyo-Sharingan-Hub-roblox-blox-fruits/main/Hub.lua"))()
+wait(5)  -- czekamy aż intro się skończy
+
+-- Potem Hub
+loadstring(game:HttpGet(repo .. "Hub.lua"))()
+
+print("Hub powinien się pojawić!")
